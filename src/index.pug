@@ -9,12 +9,16 @@ html(lang="en")
   body
     #music.music
       .music__info
-        .music__img
-          img#cover(src=require("./img/ukulele.jpg"), alt="music-cover")
-        #artist.music__artist Famous Artist
-        #title.music__title Ukulele Song
-      #progress-container.music__progress-container
-        #progress.progress
+        .music__wrapper
+          .music__img
+            img#cover(src=require("./img/ukulele.jpg"), alt="music-cover")
+          #artist.music__artist Famous Artist
+          #title.music__title Ukulele Song
+      #progress-container.music__progress-wrapper
+        span#timer.music__timestamp(aria-label='timer') 00:00
+        #progress-container.music__progress-container
+          #progress.music__progress
+        span#duration.music__timestamp(aria-label='timer') 00:00
       audio#audio(src=require("./music/ukulele.mp3"))
       .music__nav
         button#prev.btn
