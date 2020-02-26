@@ -4,6 +4,23 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title XXXX
+    title Music Player
     link(href=require("./favicon.ico"), rel='shortcut icon')
   body
+    #music.music
+      .music__info
+        .music__img
+          img#cover(src=require("./img/ukulele.jpg"), alt="music-cover")
+        #artist.music__artist Famous Artist
+        #title.music__title Ukulele Song
+      #progress-container.music__progress-container
+        #progress.progress
+      audio#audio(src=require("./music/ukulele.mp3"))
+      .music__nav
+        button#prev.btn
+          img(src=require("./img/prev-icon.svg"))
+        button#play.btn
+          img(src=require("./img/play-icon.svg"))
+        button#next.btn
+          img(src=require("./img/next-icon.svg"))
+

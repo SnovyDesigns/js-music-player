@@ -70,6 +70,10 @@ module.exports = {
         }
       },
       {
+        test: /\.(mov|mp4|ogv|webm|mp3)$/,
+        loader: 'file-loader'
+      },
+      {
         test: /\.pug$/,
         use: ['pug-loader']
       }
