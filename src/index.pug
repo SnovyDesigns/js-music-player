@@ -12,19 +12,25 @@ html(lang="en")
         .music__wrapper
           .music__img
             img#cover(src=require("./img/ukulele.jpg"), alt="music-cover")
-          #artist.music__artist Famous Artist
-          #title.music__title Ukulele Song
-      #progress-container.music__progress-wrapper
-        span#timer.music__timestamp(aria-label='timer') 00:00
+            img.hidden(src=require("./img/hey.jpg"), alt="music-cover")
+            img.hidden(src=require("./img/summer.jpg"), alt="music-cover")
+          #artist.music__artist
+          #title.music__title
+      .music__progress-wrapper
+        span#timer.music__timestamp(aria-label='timer')
         #progress-container.music__progress-container
           #progress.music__progress
-        span#duration.music__timestamp(aria-label='timer') 00:00
-      audio#audio(src=require("./music/ukulele.mp3"))
+        span#duration.music__timestamp.music__timestamp--duration(aria-label='timer')
+      audio#audio(src=require("./music/ukulele.mp3"), preload="metadata")
+      audio.hidden(src=require("./music/hey.mp3"))
+      audio.hidden(src=require("./music/summer.mp3"))
       .music__nav
         button#prev.btn
           img(src=require("./img/prev-icon.svg"))
         button#play.btn
           img(src=require("./img/play-icon.svg"))
+        button.hidden
+          img(src=require("./img/pause-icon.svg"))
         button#next.btn
           img(src=require("./img/next-icon.svg"))
 

@@ -27,7 +27,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
+            name: 'images/[name].[ext]',
             limit: 10 * 1024
           }
         }
@@ -70,8 +70,15 @@ module.exports = {
         }
       },
       {
-        test: /\.(mov|mp4|ogv|webm|mp3)$/,
-        loader: 'file-loader'
+        test: /\.(mp3)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'music/[name].[ext]'
+            }
+          }
+        ]
       },
       {
         test: /\.pug$/,
